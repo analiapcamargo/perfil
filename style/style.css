@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.avatar {
+    width: 18rem;
+    margin: 0 6% 0 0;
+}
+
+
+/*animação do nome começa aqui*/
+
+.sign {
+    background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
+            #181e6b,
+            transparent);
+    font-family: 'Averia Serif Libre', cursive;
+    font-size: clamp(3.5rem, 2.5vw, 5rem);
+    color: #032cfa;
+    text-shadow: 0 0 0.6rem #e6e9ff, 0 0 1.5rem #657aff,
+        -0.2rem 0.1rem 1rem #656fff, 0.2rem 0.1rem 1rem #656fff,
+        0 -0.5rem 2rem #2f24ff, 0 0.5rem 3rem #2436ff;
+    animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    22%,
+    36%,
+    75% {
+        color: #e6e6ff;
+        text-shadow: 0 0 0.6rem #e6e9ff, 0 0 1.5rem #657aff,
+        -0.2rem 0.1rem 1rem #656fff, 0.2rem 0.1rem 1rem #656fff,
+        0 -0.5rem 2rem #2f24ff, 0 0.5rem 3rem #2436ff;
+    }
+
+    28%,
+    33% {
+        color: #9a9af8;
+        text-shadow: none;
+    }
+
+    82%,
+    97% {
+        color: #7775f3;
+        text-shadow: none;
+    }
+}
+
+.flicker {
+    animation: shine 2s forwards, blink 3s 3s infinite;
+}
+
+.fast-flicker {
+    animation: shine 2s forwards, blink 10s 2s infinite;
+}
+
+.fast-flicker2 {
+    animation: shine 2s forwards, blink 6s 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        color: #19186b;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #e6e6ff;
+        text-shadow: 0 0 0.6rem #e6e9ff, 0 0 1.5rem #657aff,
+        -0.2rem 0.1rem 1rem #656fff, 0.2rem 0.1rem 1rem #656fff,
+        0 -0.5rem 2rem #2f24ff, 0 0.5rem 3rem #2436ff;
+    }
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.9;
+    }
+
+    6% {
+        opacity: 0.85;
+    }
+
+    8% {
+        opacity: 0.95;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    11% {
+        opacity: 0.922;
+    }
+
+    12% {
+        opacity: 0.9;
+    }
+
+    14% {
+        opacity: 0.95;
+    }
+
+    16% {
+        opacity: 0.98;
+    }
+
+    17% {
+        opacity: 0.9;
+    }
+
+    19% {
+        opacity: 0.93;
+    }
+
+    20% {
+        opacity: 0.99;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    26% {
+        opacity: 0.94;
+    }
+
+    28% {
+        opacity: 0.98;
+    }
+
+    37% {
+        opacity: 0.93;
+    }
+
+    38% {
+        opacity: 0.5;
+    }
+
+    39% {
+        opacity: 0.96;
+    }
+
+    42% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 0.97;
+    }
+
+    46% {
+        opacity: 0.94;
+    }
+
+    56% {
+        opacity: 0.9;
+    }
+
+    58% {
+        opacity: 0.9;
+    }
+
+    60% {
+        opacity: 0.99;
+    }
+
+    68% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.9;
+    }
+
+    72% {
+        opacity: 0.95;
+    }
+
+    93% {
+        opacity: 0.93;
+    }
+
+    95% {
+        opacity: 0.95;
+    }
+
+    97% {
+        opacity: 0.93;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*animação nome termina aqui*/
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    margin: 0 6%;
+}
+
+.icon-box {
+    width: 4rem;
+}
+
+.icon-box img {
+    width: 100%;
+    vertical-align: middle;
+
+}
+
+
+@keyframes shine-icon {
+    0% {
+        background-color: #0000ff;
+    }
+
+    100% {
+        background-color: #4747f7;
+        box-shadow: 0 0 0.6rem #e6e9ff, 0 0 1.5rem #657aff,
+        -0.2rem 0.1rem 1rem #656fff, 0.2rem 0.1rem 1rem #656fff,
+        0 -0.5rem 2rem #2f24ff, 0 0.5rem 3rem #2436ff;
+    }
+}
+
+.github:hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 2.125rem;
+    animation: shine-icon 1s forwards, blink 2s 2s infinite;
+}
+
+.linkedin:hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 0.5rem;
+    animation: shine-icon 1s forwards, blink 2s 2s infinite;
+}
+
+.insta:hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 1.31rem;
+    animation: shine-icon 1s forwards, blink 2s 2s infinite;
+}
+
+.icones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+footer {
+    font-family: 'Averia Serif Libre', cursive;
+    font-size: 1rem;
+    color: #E0F1F4;
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 850px) {
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .avatar {
+        width: 50%;
+        margin: 0;
+    }
+
+    .sign{
+        font-size: clamp(2.1rem, 2.5vw, 3rem);
+    }
+
+    .icones {
+        width: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .icon-box {
+        width: 2.8rem;
+    }
+
+    .info {
+        text-align: center;
+        margin: 0 6%;
+        width: auto;
+    }
+
+    footer{
+        font-size:clamp(0.8rem, 2.5vw, 1.2rem);
+    }
+
+
+
+
+
+
+}

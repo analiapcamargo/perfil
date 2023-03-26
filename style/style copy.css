@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+main{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.avatar{
+    width:18rem;
+    margin:0 6% 0 0;
+}
+
+
+ /*animação foto começa aqui
+  #cf3 img {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+  }
+
+  @keyframes cf3FadeInOut {
+    0% {
+    opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+  }
+
+  @keyframes cf3FadeInOut2 {
+    100% {
+    opacity:1;
+    }
+    55% {
+    opacity:1;
+    }
+    45% {
+    opacity:0;
+    }
+    0% {
+    opacity:0;
+    }
+  }
+  
+  #cf3 img.bottom {
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  animation-direction: alternate;
+  }
+
+  #cf3 img.top {
+    animation-name: cf3FadeInOut2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+    }
+
+animação foto termina aqui*/
+
+.nome{
+    font-family: 'Averia Serif Libre', cursive;
+    font-size:clamp(3.5rem, 2.5vw, 5rem);
+    color:#E0F1F3;
+    text-align: center;
+}
+
+
+/*animação nome começa aqui */
+.nome{
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     90deg,
+     
+     rgb(235, 212, 212) 0%,
+     rgb(230, 172, 172) 10%,
+     rgb(251, 0, 0) 20%,
+     rgb(230, 172, 172) 30%,
+     rgb(235, 212, 212) 100%
+  
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+ 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 4s linear infinite;
+   display: inline-block;
+
+  }
+  
+  @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+  }
+  /*animação nome termina aqui*/
+
+
+.info{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    margin-right:6%;
+}
+
+.icon-box{
+    width:4rem;
+}
+
+.icon-box img{
+    width:100%;
+    vertical-align: middle;
+
+}
+
+.github:hover{
+    background-color: rgb(255, 0, 0);
+    border-radius:2.125rem;
+}
+
+.linkedin:hover{
+    background-color: rgb(255, 0, 0);
+    border-radius:0.5rem;
+}
+
+.insta:hover{
+    background-color: rgb(255, 0, 0);
+    border-radius:1.31rem;
+}
+
+.icones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+footer{
+    font-family:'Averia Serif Libre', cursive;
+    font-size:1rem;
+    color:#E0F1F4;
+    text-align: center;
+    padding:15px 0;
+}
+
+@media screen and (max-width: 767px) {
+
+    main{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .avatar{
+        width:50%;
+        margin:5%;
+    }
+
+    .avatar2{
+        width:50%;
+        margin:5%;
+    }
+
+    #cf3 {
+
+        margin:0 5%;
+      }
+
+
+
+    .icones{
+        width:auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .icon-box{
+        width:2.8rem;
+    }
+
+    .info{
+        text-align: center;
+        margin:6%;
+        width:auto;
+    }
+
+    .nome{
+        font-size:clamp(2.5rem, 2.5vw, 4rem);
+    }
+
+
+   
+
+}
+
+
+
